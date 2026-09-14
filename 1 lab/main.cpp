@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 {
     if (argc != 2)
     {
-        cerr << "Didn’t see argument, Usage: <N>\n";
+        cerr << "Error: Usage <N>\n";
         return 1;
     }
 
