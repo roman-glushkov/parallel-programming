@@ -1,0 +1,8 @@
+{
+  "C_Cpp.errorSquiggles": "disabled",
+  "files.associations": {
+    "iostream": "cpp",
+    "xstring": "cpp"
+  },
+  "cmake.sourceDirectory": "C:/PGTU/parallel programming/1 lab"
+}

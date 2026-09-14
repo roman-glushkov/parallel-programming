@@ -1,0 +1,29 @@
+{
+  "name": "algorithms-and-data-structures",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "check": "prettier --check .",
+    "lint:cpp": "powershell -Command \"Get-ChildItem -Recurse -Filter *.cpp | ForEach-Object { clang-tidy $_.FullName -- -std=c++17 }\"",
+    "lint:cpp:fix": "powershell -Command \"Get-ChildItem -Recurse -Filter *.cpp | ForEach-Object { clang-tidy $_.FullName -fix -- -std=c++17 }\"",
+    "format:cpp": "powershell -Command \"Get-ChildItem -Recurse -Include *.cpp,*.h,*.hpp | ForEach-Object { clang-format -i $_.FullName }\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roman-glushkov/Algorithms-and-data-structures.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/roman-glushkov/Algorithms-and-data-structures/issues"
+  },
+  "homepage": "https://github.com/roman-glushkov/Algorithms-and-data-structures#readme",
+  "devDependencies": {
+    "prettier": "3.6.2"
+  }
+}
