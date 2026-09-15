@@ -4,9 +4,7 @@
 #include <mutex>
 #include <thread>
 #include <vector>
-
 using namespace std;
-
 mutex coutMutex;
 
 void Worker(int index)
@@ -30,8 +28,7 @@ int main(int argc, char* argv[])
     auto [ptr, ec] = from_chars(first, last, threadCount);
     if (ec != errc{} || ptr != last || threadCount <= 0)
     {
-        cerr << "Error: '" << argv[1]
-             << "' is not a valid number of threads (integer > 0 required)\n";
+        cerr << "Error: '" << argv[1] << "' is not a valid number of threads (integer > 0 required)\n";
         return 1;
     }
 
