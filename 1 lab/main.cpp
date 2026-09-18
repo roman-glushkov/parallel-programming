@@ -5,8 +5,8 @@
 #include <thread>
 #include <vector>
 using namespace std;
-mutex coutMutex;
 
+mutex coutMutex;
 void Worker(int index)
 {
     lock_guard lock(coutMutex);
@@ -24,7 +24,6 @@ int main(int argc, char* argv[])
     int threadCount = 0;
     const char* first = argv[1];
     const char* last  = argv[1] + strlen(argv[1]);
-
     auto [ptr, ec] = from_chars(first, last, threadCount);
     if (ec != errc{} || ptr != last || threadCount <= 0)
     {
@@ -34,7 +33,6 @@ int main(int argc, char* argv[])
 
     vector<jthread> threads;
     threads.reserve(threadCount);
-
     for (int i = 1; i <= threadCount; ++i)
     {
         threads.emplace_back(Worker, i);
