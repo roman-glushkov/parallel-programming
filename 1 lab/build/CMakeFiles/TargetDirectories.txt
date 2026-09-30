@@ -1,3 +1,0 @@
-C:/PGTU/parallel programming/1 lab/build/CMakeFiles/lab1.dir
-C:/PGTU/parallel programming/1 lab/build/CMakeFiles/edit_cache.dir
-C:/PGTU/parallel programming/1 lab/build/CMakeFiles/rebuild_cache.dir
