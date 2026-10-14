@@ -1,0 +1,4 @@
+C:/PGTU/parallel programming/3 lab/build/CMakeFiles/bank.dir
+C:/PGTU/parallel programming/3 lab/build/CMakeFiles/test_bank.dir
+C:/PGTU/parallel programming/3 lab/build/CMakeFiles/edit_cache.dir
+C:/PGTU/parallel programming/3 lab/build/CMakeFiles/rebuild_cache.dir

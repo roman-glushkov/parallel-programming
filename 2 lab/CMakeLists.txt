@@ -10,10 +10,8 @@ endif()
 
 add_executable(blur main.cpp)
 
-# stb — header-only, только путь к заголовкам
 target_include_directories(blur PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
-# оптимизация для g++/clang
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     target_compile_options(blur PRIVATE -O2 -Wall -Wextra)
 endif()
