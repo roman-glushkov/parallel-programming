@@ -1,0 +1,91 @@
+Start testing: Oct 24 15:00 RTZ 2 (çèìà)
+----------------------------------------------------------
+1/3 Testing: bank_tests
+1/3 Test: bank_tests
+Command: "C:/PGTU/parallel programming/3 lab/build/test_bank.exe"
+Directory: C:/PGTU/parallel programming/3 lab/build
+"bank_tests" start time: Oct 24 15:00 RTZ 2 (çèìà)
+Output:
+----------------------------------------------------------
+test_open OK
+test_deposit OK
+test_withdraw OK
+test_negative_deposit OK
+test_negative_withdraw OK
+test_negative_try_withdraw OK
+test_negative_initial_cash OK
+test_no_account_deposit OK
+test_no_account_withdraw OK
+test_no_account_try_withdraw OK
+test_no_account_get_balance OK
+test_no_account_close OK
+test_not_enough_withdraw OK
+test_not_enough_cash_deposit OK
+test_try_withdraw OK
+test_close OK
+test_ops_count OK
+test_failed_ops_counted OK
+test_wallet_take_put OK
+test_wallet_negative OK
+test_wallet_transfer OK
+test_wallet_concurrent_transfer OK
+test_multithreaded OK (ops delta 1600000)
+
+All tests passed
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"bank_tests" end time: Oct 24 15:00 RTZ 2 (çèìà)
+"bank_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: economy_single
+2/3 Test: economy_single
+Command: "C:/PGTU/parallel programming/3 lab/build/bank.exe" "--mode" "single" "--seconds" "1" "--quiet"
+Directory: C:/PGTU/parallel programming/3 lab/build
+"economy_single" start time: Oct 24 15:00 RTZ 2 (çèìà)
+Output:
+----------------------------------------------------------
+mode: single
+seconds: 1
+operations: 4337460
+ops/sec: 4.33746e+06
+sum wallets: 640
+bank cash: 640
+sum accounts: 12260
+invariant wallets==cash: OK
+invariant cash+accounts==total: OK
+<end of output>
+Test time =   1.05 sec
+----------------------------------------------------------
+Test Passed.
+"economy_single" end time: Oct 24 15:00 RTZ 2 (çèìà)
+"economy_single" time elapsed: 00:00:01
+----------------------------------------------------------
+
+3/3 Testing: economy_parallel
+3/3 Test: economy_parallel
+Command: "C:/PGTU/parallel programming/3 lab/build/bank.exe" "--mode" "parallel" "--seconds" "1" "--quiet"
+Directory: C:/PGTU/parallel programming/3 lab/build
+"economy_parallel" start time: Oct 24 15:00 RTZ 2 (çèìà)
+Output:
+----------------------------------------------------------
+mode: parallel
+seconds: 1.00033
+operations: 11274772
+ops/sec: 1.1271e+07
+sum wallets: 680
+bank cash: 680
+sum accounts: 12220
+invariant wallets==cash: OK
+invariant cash+accounts==total: OK
+<end of output>
+Test time =   1.01 sec
+----------------------------------------------------------
+Test Passed.
+"economy_parallel" end time: Oct 24 15:00 RTZ 2 (çèìà)
+"economy_parallel" time elapsed: 00:00:01
+----------------------------------------------------------
+
+End testing: Oct 24 15:00 RTZ 2 (çèìà)

@@ -8,5 +8,13 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
 
-add_executable(bank main.cpp)
-add_executable(test_bank test_bank.cpp)
+set(COMMON_SOURCES bank.cpp wallet.cpp)
+
+add_executable(bank main.cpp ${COMMON_SOURCES})
+add_executable(test_bank test_bank.cpp ${COMMON_SOURCES})
+
+enable_testing()
+
+add_test(NAME bank_tests       COMMAND test_bank)
+add_test(NAME economy_single   COMMAND bank --mode single   --seconds 1 --quiet)
+add_test(NAME economy_parallel COMMAND bank --mode parallel --seconds 1 --quiet)

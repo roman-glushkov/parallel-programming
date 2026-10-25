@@ -1,0 +1,4 @@
+bank_tests 3 0.0637074
+economy_single 2 0.525802
+economy_parallel 2 0.506285
+---
